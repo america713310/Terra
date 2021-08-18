@@ -25,6 +25,7 @@ namespace Terra.Controllers
 
             foreach (var item in _dialogIds)
             {
+                _count = 0;
                 foreach (var id in ids)
                 {
                     if (rgd.Init().Where(x => x.IDRGDialog == item).Select(y => y.IDClient).Contains(id))
